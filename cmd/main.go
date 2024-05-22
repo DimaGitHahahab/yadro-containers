@@ -5,8 +5,8 @@ import (
 	"log"
 	"os"
 
-	"yadro-containers/internal/containersort"
-	"yadro-containers/internal/scanner"
+	"github.com/DimaGitHahahab/yadro-containers/internal/containersort"
+	"github.com/DimaGitHahahab/yadro-containers/internal/scanner"
 )
 
 var inputSource = os.Stdin

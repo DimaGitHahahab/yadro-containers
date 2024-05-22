@@ -5,11 +5,13 @@ import (
 	"os"
 )
 
+// Constraints from problem description
 const (
 	maxContainersNum          = 100
 	maxSameColorsPerContainer = 1000000000
 )
 
+// ScanContainersNum scans the number of containers from the input source
 func ScanContainersNum(src *os.File) (int, error) {
 	var num int
 	_, err := fmt.Fscan(src, &num)
@@ -23,6 +25,7 @@ func ScanContainersNum(src *os.File) (int, error) {
 	return num, nil
 }
 
+// ScanContainers scans the number of balls of each color in each container from the input source
 func ScanContainers(src *os.File, containersNum int) ([][]int, error) {
 	containers := make([][]int, containersNum)
 	for i := 0; i < len(containers); i++ {
